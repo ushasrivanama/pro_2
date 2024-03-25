@@ -238,6 +238,16 @@ if uploaded_file is not None:
     
     plate_number2 = show_results()
     output_img, plate = detect_plate(img, plate_number2)
+    st.subheader("output image")
     st.image(output_img)
     st.subheader('detected plate number')
     st.write(plate_number2)
+    text=plate_number2
+    st.markdown(f'the recognized number :<h3 style="color:red;">{text}</h3>', unsafe_allow_html=True)
+    st.subheader("checking the database")
+    l=['DL7CQ1939','MHOIAV8866','HR03R0699']
+    if final_plate in l:
+    	st.write("registered number")
+    
+    else:
+    	st.write("not a registered number")
