@@ -245,7 +245,7 @@ if uploaded_file is not None:
     st.subheader("checking the database")
     l=['DL7CQ1939','MHOIAV8866','HR03R0699']
     if text in l:
-    	st.write(f'{text} is a registered plate number')
+    	st.write(f'<h3 style="color:blue;">{text}</h3> is a registered plate number',unsafe_allow_html=True)
     
     else:
-    	st.write(f'{text} is not a registered number')
+    	st.write(f'<h3 style="color:blue;">{text}</h3> is not a registered number',unsafe_allow_html=True)
