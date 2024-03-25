@@ -53,6 +53,11 @@ uploaded_file = st.file_uploader("Upload your picture (only .jpg)", type=["jpg"]
 if uploaded_file is not None:
     st.write("Original Image")
     st.image(uploaded_file, caption="Uploaded Image")
+
+    # Convert image to cv2 format
+    bytes_data = uploaded_file.getvalue()
+    opencv_image = cv2.imdecode(np.frombuffer(bytes_data, np.uint8), cv2.IMREAD_COLOR)
+    
     # Loads the data required for detecting the license plates from cascade classifier.
     plate_cascade = cv2.CascadeClassifier('indian_license_plate.xml')
     #identifying the plate
@@ -84,7 +89,7 @@ if uploaded_file is not None:
         plt.title(title)
         plt.show()
 
-    img = cv2.imread(uploaded_file)
+    img =opencv_image
 
     # Getting plate prom the processed image
     output_img ,plates= detect_plate(img)
