@@ -238,5 +238,6 @@ if uploaded_file is not None:
     
     plate_number2 = show_results()
     output_img, plate = detect_plate(img, plate_number2)
-    display(output_img, 'license plate number in the input image')
+    st.image(output_img, 'license plate number in the input image')
+    st.subheader('detected plate number')
     st.write(plate_number2)
