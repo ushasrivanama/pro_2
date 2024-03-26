@@ -241,11 +241,11 @@ if uploaded_file is not None:
     st.subheader("output image")
     st.image(output_img)
     text=plate_number2
-    st.markdown(f'the recognized number :<h3 style="color:red;">{text}</h3>', unsafe_allow_html=True)
+    st.markdown(f'the recognized number :<h5 style="color:red;">{text}</h5>', unsafe_allow_html=True)
     st.subheader("checking the database")
     l=['DL7CQ1939','MHOIAV8866','HR03R0699']
     if text in l:
-    	st.write(f'<h3 style="color:blue;">{text}</h3> is a registered plate number',unsafe_allow_html=True)
+    	st.write(f'<h5 style="color:blue;">{text}</h5> is a registered plate number',unsafe_allow_html=True)
     
     else:
-    	st.write(f'<h3 style="color:blue;">{text}</h3> is not a registered number',unsafe_allow_html=True)
+    	st.write(f'<h5 style="color:blue;">{text}</h5> is not a registered number',unsafe_allow_html=True)
