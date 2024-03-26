@@ -37,12 +37,12 @@ import streamlit as st #app deployment
 
 #Introduction
 
-st.title('Car License Plate Detector :car:')
+st.title('License Plate Detector ')
 
 
 #header for the project
 st.header('What does it do?')
-st.markdown('This is an app that _regonizes_ and **detects** license plates in images, then return an image of the car with license plate.')
+st.markdown('This is an app that _regonizes_ and **detects** license plates in images, then return an image of the vehicle with plate number and checks wether the number is registered or not.')
 
 #------------ Data input
 st.subheader('Input a picture')
