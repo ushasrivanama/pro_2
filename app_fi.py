@@ -249,4 +249,4 @@ if uploaded_file is not None:
     	st.write(f'**{text}** is a registered plate number')
     
     else:
-    	st.write(f'<p style="color:blue;"> {text}  is not a registered number</p>',unsafe_allow_html=True)
+    	st.write(f'<p style="color:blue;"> **{text}**  is not a registered number</p>',unsafe_allow_html=True)
