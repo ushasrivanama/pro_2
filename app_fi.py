@@ -46,7 +46,7 @@ st.markdown('This is an app that _regonizes_ and **detects** license plates in i
 
 #------------ Data input
 st.subheader('Input a picture')
-st.markdown('Upload your picture in the box below, or take a picture with your phone')
+st.markdown('Upload your picture in the box below')
 
 #upload a picture
 uploaded_file = st.file_uploader("Upload your picture (only .jpg)", type=["jpg"])
