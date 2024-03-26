@@ -238,7 +238,6 @@ if uploaded_file is not None:
     
     plate_number2 = show_results()
     output_img, plate = detect_plate(img, plate_number2)
-    st.image(char)
     st.subheader("output image")
     st.image(output_img)
     text=plate_number2
