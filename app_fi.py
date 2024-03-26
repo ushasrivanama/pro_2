@@ -238,9 +238,9 @@ if uploaded_file is not None:
     
     plate_number2 = show_results()
     output_img, plate = detect_plate(img, plate_number2)
+    st.image(char)
     st.subheader("output image")
     st.image(output_img)
-    st.write(st.__version__)
     text=plate_number2
     st.markdown(f'recognized plate number :<h5 style="color:red;">{text}</h5>', unsafe_allow_html=True)
     st.subheader("verifying the plate number")
