@@ -244,9 +244,9 @@ if uploaded_file is not None:
     text=plate_number2
     st.markdown(f'recognized plate number :<h5 style="color:red;">{text}</h5>', unsafe_allow_html=True)
     st.subheader("verifying the plate number")
-    l=['DL7CQ1939','MHOIAV8866','HR03R0699']
+    l=['DL7C01939','MHOIAV8866','HR03R0699']
     if text in l:
-    	st.write(f'**{text}** is a registered plate number')
+    	st.write(f' **{text}**  is a registered plate number')
     
     else:
-    	st.write(f'<p style="color:blue;"> **{text}**  is not a registered number</p>',unsafe_allow_html=True)
+    	st.write(f'<p style="color:blue;"> {text} is not a registered number</p>',unsafe_allow_html=True)
